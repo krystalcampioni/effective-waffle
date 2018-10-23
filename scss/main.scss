@@ -1,0 +1,48 @@
+@import "bourbon";
+@import "neat";
+
+@import "base/*";
+@import "components/*";
+
+.main {
+  padding: 90px 10px;
+  margin: 0 auto;
+  max-width: 720px;
+  min-height: calc(100vh - 40px);
+
+  @include device($phone) {
+    padding: 30px 10px;
+  }
+
+  &--narrow {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    float: left;
+    width: 100%;
+  }
+}
+
+.vote {
+  position: fixed;
+  bottom: 12px;
+  width: 120px;
+  left: 0;
+  z-index: 20;
+}
+
+
+.-hide-for-mobile {
+  @include device($phone) {
+    display: none;
+  }
+}
+
+.-show-on-mobile {
+  @include device($tablet-up) {
+    display: none;
+  }
+}

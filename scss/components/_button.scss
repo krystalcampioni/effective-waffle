@@ -1,0 +1,55 @@
+.button {
+  appearance: none;
+  background: $primary-color;
+  border-radius: 0;
+  border: 0;
+  color: $white;
+  font-family: $font-family;
+  height: 40px;
+  outline: none;
+  text-align: center;
+  text-transform: capitalize;
+  transform-origin: center;
+  text-decoration: none;
+
+  &--left {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    float: left;
+  }
+
+  &:hover {
+    .button__arrow { width: 17px; }
+  }
+
+  &__arrow {
+    @include prefixer(transition, all .2s ease, webkit moz spec);
+    position: relative;
+    background: $white;
+    width: 11px;
+    height: 2px;
+    border-radius: 0 10px 10px 0;
+    display: inline-block;
+    margin-left: 10px;
+    top: -4px;
+
+    &::before,
+    &::after {
+      @include prefixer(transform-origin, right, webkit moz spec);
+      background: $white;
+      content: ' ';
+      height: 2px;
+      position: absolute;
+      right: 1px;
+      width: 7px;
+    }
+
+    &::before {
+      @include prefixer(transform, rotate(45deg), webkit moz spec);
+    }
+
+    &::after {
+      @include prefixer(transform, rotate(-45deg), webkit moz spec);
+    }
+  }
+}

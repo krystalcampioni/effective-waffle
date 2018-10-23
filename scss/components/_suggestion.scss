@@ -1,0 +1,19 @@
+.suggestion {
+  width: calc(100% - 380px);
+  float: right;
+  position: relative;
+  margin-top: 15px;
+
+  @include device($phone) {
+    width: 100%;
+    margin: 0;
+  }
+
+  &__text {
+    color: $secondary-color;
+    position: absolute;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+}

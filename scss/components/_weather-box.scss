@@ -1,0 +1,61 @@
+.weather-box {
+  width: 348px;
+  background-image: linear-gradient(to bottom, rgba(192, 121, 100, 0.54), rgba(141, 68, 53, 0.0));
+  padding: 15px;
+  margin: 15px;
+  float: left;
+
+  @include device($phone) {
+    width: 100%;
+    margin: 0;
+  }
+
+  &__city-name {
+  	font-size: 27px;
+  	font-weight: bold;
+  	text-align: left;
+  	color: $secondary-color;
+    margin-bottom: 0;
+  }
+
+  &__country {
+    font-size: 16px;
+    text-align: left;
+    color: $secondary-color;
+  }
+
+  &__number {
+    float: left;
+  }
+
+  &__temp {
+    font-size: 55px;
+    font-weight: bold;
+    text-align: left;
+    color: $primary-color;
+  }
+
+  &__degree {
+    float: left;
+    font-size: 24px;
+    padding-top: 10px;
+  }
+
+  &__desc {
+    font-size: 22px;
+    text-align: left;
+    color: $terciary-color;
+  }
+
+  &__small-text {
+    font-size: 14px;
+    color: $terciary-color;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  &__notice {
+    text-align: left;
+    font-size: 18px;
+  }
+}

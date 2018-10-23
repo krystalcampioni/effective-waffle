@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import "bourbon";
+
+$white: #fff;
+$black: #000;
+
+$primary-color: #7932c6;
+$secondary-color: #73f9ff;
+$terciary-color: #3259c6;
+
+$font-family: 'Montserrat', sans-serif;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  @include size(100%);
+  font-family: $font-family;
+  background: url('/images/background.jpg') center /cover;
+  color: white;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: 27px;
+  font-weight: bold;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  border: 1px solid $secondary-color;
+  border-bottom: 0;
+}
+
+section {
+  float: left;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 10px;
+}
